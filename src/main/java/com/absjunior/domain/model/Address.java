@@ -1,9 +1,12 @@
 package com.absjunior.domain.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
-public class Endereco {
+public class Address {
+	
+	@Id
     private String cep;
     private String logradouro;
     private String complemento;

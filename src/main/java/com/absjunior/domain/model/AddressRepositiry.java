@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EnderecoRepositiry  extends CrudRepository<Endereco, String>{
+public interface AddressRepositiry  extends CrudRepository<Address, String>{
 
 }
