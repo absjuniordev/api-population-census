@@ -31,7 +31,7 @@ public class ClientRestController {
 	
 	@Operation(summary = "Find a user by Id")
 	@GetMapping("/{id}")
-	public ResponseEntity<Client> findById(@PathVariable Long id){
+	public ResponseEntity<Client> findById(@PathVariable("id") Long id){
 		return ResponseEntity.ok(clientService.findById(id));
 	}
 	
@@ -44,14 +44,14 @@ public class ClientRestController {
 	
 	@Operation(summary = "Update a user in the database")
 	@PutMapping("/{id}")
-	public ResponseEntity<Client> update(@PathVariable Long Id, @RequestBody Client client){
+	public ResponseEntity<Client> update(@PathVariable("id") Long Id, @RequestBody Client client){
 		clientService.update(Id, client);
 		return ResponseEntity.ok(client);
 	}
 	
 	@Operation(summary = "Delete a user in the database")
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Client> delete(@PathVariable Long id){
+	public ResponseEntity<Client> delete(@PathVariable("id") Long id){
 		clientService.delete(id);
 		return ResponseEntity.ok().build();		
 	}
