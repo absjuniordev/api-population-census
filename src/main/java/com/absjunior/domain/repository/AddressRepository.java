@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.absjunior.domain.model.Address;
 
 @Repository
-public interface AddressRepositiry  extends CrudRepository<Address, String>{
+public interface AddressRepository  extends CrudRepository<Address, String>{
 
 }
