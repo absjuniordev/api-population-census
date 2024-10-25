@@ -1,4 +1,4 @@
-package com.absjunior.domain.service;
+package com.absjunior.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

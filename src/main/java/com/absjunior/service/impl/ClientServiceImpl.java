@@ -1,4 +1,4 @@
-package com.absjunior.domain.service.impl;
+package com.absjunior.service.impl;
 
 
 import java.util.Optional;
@@ -10,8 +10,8 @@ import com.absjunior.domain.model.Address;
 import com.absjunior.domain.model.Client;
 import com.absjunior.domain.repository.AddressRepository;
 import com.absjunior.domain.repository.ClientRepository;
-import com.absjunior.domain.service.ClientService;
-import com.absjunior.domain.service.ViaCEPService;
+import com.absjunior.service.ClientService;
+import com.absjunior.service.ViaCEPService;
 
 /**
  * Implementação da <b>Strategy</b> {@link ClienteService}, a qual pode ser

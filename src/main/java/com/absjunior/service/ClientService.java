@@ -1,4 +1,4 @@
-package com.absjunior.domain.service;
+package com.absjunior.service;
 
 import com.absjunior.domain.model.Client;
 

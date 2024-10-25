@@ -1,4 +1,4 @@
-package com.absjunior.domain.doc;
+package com.absjunior.doc;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

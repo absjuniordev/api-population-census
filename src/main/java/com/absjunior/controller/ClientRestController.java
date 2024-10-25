@@ -1,4 +1,4 @@
-package com.absjunior.domain.controller;
+package com.absjunior.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.absjunior.domain.model.Client;
-import com.absjunior.domain.service.ClientService;
+import com.absjunior.service.ClientService;
 
 import io.swagger.v3.oas.annotations.Operation;
 
