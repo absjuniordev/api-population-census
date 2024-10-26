@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.absjunior.domain.model.Client;
 import com.absjunior.service.ClientService;
 
 import io.swagger.v3.oas.annotations.Operation;
+
+import java.net.URI;
 
 @RestController
 @RequestMapping("clients")
@@ -38,9 +41,13 @@ public class ClientRestController {
 	@Operation(summary = "Insert a user into the databse")
 	@PostMapping
 	public ResponseEntity<Client> insert(@RequestBody Client client){
-		clientService.insert(client);
-		return ResponseEntity.ok(client);
+		var clientCreated = clientService.insert(client);	
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+				.path("/{id}").buildAndExpand(clientCreated.getId())
+				.toUri();
+		return ResponseEntity.created(location).body(clientCreated);
 	}
+       
 	
 	@Operation(summary = "Update a user in the database")
 	@PutMapping("/{id}")

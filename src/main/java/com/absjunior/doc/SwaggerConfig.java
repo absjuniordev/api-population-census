@@ -12,9 +12,9 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                    .title("Via CEP")
+                    .title("CENCUS")
                     .version("1.0.0")
-                    .description("API para consulta de CEP")
+                    .description("Censo populacional")
                     .contact(new io.swagger.v3.oas.models.info.Contact()
                         .name("Arnaldo Junior")
                         .url("https://github.com/absjuniordev")
